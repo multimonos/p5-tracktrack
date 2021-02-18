@@ -1,0 +1,45 @@
+{
+    "name": "@multimonos/p5-tracktrack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/index.js",
+    "scripts": {
+        "test": "npx jest",
+        "dev": "cd ./src && npx snowpack dev",
+        "build": "cd ./src && npx snowpack build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/multimonos/p5-tracktrack.git"
+    },
+    "bugs": {
+        "url": "https://github.com/multimonos/p5-tracktrack/issues"
+    },
+    "homepage": "https://github.com/multimonos/p5-tracktrack#readme",
+    "keywords": [
+        "p5js"
+    ],
+    "author": "craig hopgood <searaig@gmail.com> (https://multimonos.com)",
+    "license": "ISC",
+    "dependencies": {
+        "@multimonos/p5-vectorxt": "^0.1.4",
+        "p5": "^1.2.0",
+        "ramda": "^0.27.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.13",
+        "@babel/core": "^7.12.13",
+        "@babel/node": "^7.12.13",
+        "@babel/preset-env": "^7.12.13",
+        "@babel/register": "^7.12.13",
+        "jest": "^26.6.3",
+        "jest-canvas-mock": "^2.3.1",
+        "snowpack": "^3.0.11"
+    },
+    "jest": {
+        "verbose": true,
+        "setupFiles": [
+            "jest-canvas-mock"
+        ]
+    }
+}
