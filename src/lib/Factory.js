@@ -17,6 +17,7 @@ const throwInvalidArgumentError = () => { throw new Error( `Argument should be o
 const Factory = {
 
     //usage: Factory.create( Model.Schema )( defaults || {} )
+    //usage: Factory.create( Model.Schema, defaults || {} )
     create: curry( ( schema, defaults ) =>
         pipe(
             ifElse( isObject, identity, throwInvalidArgumentError ),
@@ -24,9 +25,11 @@ const Factory = {
         )( defaults ) ),
 
     //usage: Factory.createMany(5)( Model.Schema )( defaults || {} )
-    createMany: curry( ( count, schema, defaults ) =>
+    //usage: Factory.createMany(5, Model.Schema, defaults || {} )
+    createMany: curry( ( schema, count, defaults ) =>
         repeat( Factory.create( schema, defaults ), count )
     )
+
 }
 
 export default Factory

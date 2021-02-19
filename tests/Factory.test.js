@@ -30,22 +30,22 @@ describe( `Factory`, () => {
 
     } )
 
-    describe( `.createMany( count )( Model.Schema )( defaults || {} )`, () => {
+    describe( `.createMany( Model.Schema )( count )( defaults || {} )`, () => {
 
         it( `returns a list`, () => {
-            const a = Factory.createMany( 3 )( {} )( {} )
+            const a = Factory.createMany( {} )( 3 )( {} )
             expect( Array.isArray( a ) ).toBe( true )
         } )
 
         it( `returns 'count' empty objects`, () => {
-            const a = Factory.createMany( 3 )( {} )( {} )
+            const a = Factory.createMany( {} )( 3 )( {} )
             expect( Array.isArray( a ) ).toBe( true )
             expect( a ).toHaveLength( 3 )
             expect( a ).toEqual( [{}, {}, {}] )
         } )
 
         it( `is curried`, () => {
-            const a = Factory.createMany( 5, {}, {} )
+            const a = Factory.createMany( {}, 5, {} )
             expect( Array.isArray( a ) ).toBe( true )
             expect( a ).toHaveLength( 5 )
             expect( a ).toEqual( [{}, {}, {}, {}, {}] )
