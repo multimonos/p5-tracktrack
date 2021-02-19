@@ -22,6 +22,7 @@
     "author": "craig hopgood <searaig@gmail.com> (https://multimonos.com)",
     "license": "ISC",
     "dependencies": {
+        "@multimonos/p5-mixins": "^0.1.6",
         "@multimonos/p5-vectorxt": "^0.1.4",
         "p5": "^1.2.0",
         "ramda": "^0.27.1"
