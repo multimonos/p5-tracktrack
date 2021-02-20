@@ -25,7 +25,10 @@ const Mountain = {
     setPoints: r.assoc( "points" ),
 
     //fns
-    scale: ( vec, mountain ) => r.assoc( "points", r.map( v.scale( vec ), mountain.points ), mountain ),
+    scale: ( vec, mountain ) =>
+        Mountain.setPoints(
+            r.map( v.scale( vec ), Mountain.getPoints( mountain ) )
+        )( mountain ),
 
 }
 
